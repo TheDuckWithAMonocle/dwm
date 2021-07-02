@@ -11,7 +11,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#f59542";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -100,8 +100,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,     SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
-	{ 0, XF86XK_AudioLowerVolume,   spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")}, 
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
+	{ 0, XF86XK_AudioLowerVolume,   spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
+	{ 0, XF86XK_AudioMute,		spawn,	  SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
 };
 
 /* button definitions */
