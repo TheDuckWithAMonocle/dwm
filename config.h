@@ -114,6 +114,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
 	{ 0, XF86XK_AudioLowerVolume,   spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
 	{ 0, XF86XK_AudioMute,		spawn,	  SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
+	{ 0, XK_Print,                     spawn,    SHCMD("flameshot gui")},
 	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
