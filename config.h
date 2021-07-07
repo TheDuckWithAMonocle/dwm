@@ -10,6 +10,7 @@ static const Bool showsystray       = True;     /* False means no systray */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const int user_bh            = 26;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
@@ -115,8 +116,8 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioLowerVolume,   spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
 	{ 0, XF86XK_AudioMute,		spawn,	  SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
 	{ 0, XK_Print,                  spawn,    SHCMD("flameshot gui")},
-	{ 0, XF86XK_MonBrightnessDown, spawn,   SHCMD("light -U 10")},  
-	{ 0, XF86XK_MonBrightnessUp,   spawn,    SHCMD("light -A 10")},
+	{ 0, XF86XK_MonBrightnessDown,  spawn,    SHCMD("light -U 10")},  
+	{ 0, XF86XK_MonBrightnessUp,    spawn,    SHCMD("light -A 10")},
 	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
