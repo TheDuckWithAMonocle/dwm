@@ -7,7 +7,7 @@ A DWM fork with all of the basic features added in, so anyone migrating from ano
 Thanks to the suckless ideology, everyone has their own fork, and is required to build their forks themselves. It's not hard, and it's great! 
 
 Adding DWM to your greeter:
-```[Desktop Entry]
+[Desktop Entry]
 Encoding=UTF-8
 Name=Dwm
 Comment=Dynamic window manager
