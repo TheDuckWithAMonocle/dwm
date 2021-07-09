@@ -14,8 +14,8 @@ Adding DWM to your greeter:
     Comment=Dynamic window manager
     Exec=dwm
     Icon=dwm
-    Type=XSession```
-
+    Type=XSession
+ ```
 Building:
 
 ```cd ~/dwm && make```
