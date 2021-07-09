@@ -30,7 +30,7 @@ Done!
 
 Exit to your greeter by pressing `Ctrl + Shift + Q`
 
-##Autostarting 
+## Autostarting 
 
 This fork has the autostarting patch implemented. Just add ~/.dwm/autostart.sh and insert the programs you want to start on bootup in the file. 
 
