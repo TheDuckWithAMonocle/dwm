@@ -6,7 +6,7 @@ A DWM fork with all of the basic features added in, so anyone migrating from ano
 
 Thanks to the suckless ideology, everyone has their own fork, and is required to build their forks themselves. It's not hard, and it's great! 
 
-Adding DWM to your greeter by make a file called DWM.desktopand in the directory `/usr/share/xsessions` and having the follwing text in the .desktop file:
+Add DWM to your greeter by making a file called DWM.desktop in the directory `/usr/share/xsessions` and having the follwing text in the .desktop file:
 
  ```[Desktop Entry]
     Encoding=UTF-8
@@ -16,7 +16,11 @@ Adding DWM to your greeter by make a file called DWM.desktopand in the directory
     Icon=dwm
     Type=XSession
  ```
-After entering the DWM session, clone this repository. Follw the steps below to achive the setup I have. 
+Save the .desktop file.
+
+Now, clone the repository
+
+`https://github.com/TheDuckWithAMonocle/dwm`
 
 Building:
 
