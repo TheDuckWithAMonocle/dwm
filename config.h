@@ -16,8 +16,8 @@ static const unsigned int gappiv    = 10;       /* vert inner gap between window
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=11" };
+static const char dmenufont[]       = "monospace:size=11";
 static char col_gray1[]       = "#222222";
 static char col_gray2[]       = "#444444";
 static char col_gray3[]       = "#bbbbbb";
@@ -82,10 +82,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_h,  incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_v,   incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Right,      setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,             XK_Left,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_h,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_v,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
@@ -94,7 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,     {0} },
-	{ MODKEY,                      XK_f,      togglefullscr,  {0} },
+	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -112,12 +112,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
-	{ 0, XF86XK_AudioLowerVolume,   spawn,    SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
-	{ 0, XF86XK_AudioMute,		spawn,	  SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
-	{ 0, XK_Print,                  spawn,    SHCMD("flameshot gui")},
-	{ 0, XF86XK_MonBrightnessDown,  spawn,    SHCMD("light -U 10")},  
-	{ 0, XF86XK_MonBrightnessUp,    spawn,    SHCMD("light -A 10")},
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,     SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
+	{ 0, XF86XK_AudioLowerVolume,   spawn,     SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
+	{ 0, XF86XK_AudioMute,		spawn,	   SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
+	{ 0, XK_Print,                  spawn,     SHCMD("flameshot gui")},
+	{ 0, XF86XK_MonBrightnessDown,  spawn,     SHCMD("light -U 10")},  
+	{ 0, XF86XK_MonBrightnessUp,    spawn,     SHCMD("light -A 10")},
 	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
