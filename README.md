@@ -1,7 +1,8 @@
 # Duckwithamonocle's DWM fork. 
 
 A DWM fork with all of the basic features added in, so anyone migrating from another Tiling manager can just simply use it. 
-![screenshot](https://user-images.githubusercontent.com/87075822/125053460-c21eae80-e0c2-11eb-82e7-49eacac870e2.png)
+![nord](https://user-images.githubusercontent.com/87075822/126946585-039971bc-9646-40a2-b3d1-a3e330ae4b2e.png)
+
 ## How do i use it? 
 
 Thanks to the suckless ideology, everyone has their own fork, and is required to build their forks themselves. It's not hard, and it's great! 
