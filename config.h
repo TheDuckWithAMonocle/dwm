@@ -16,13 +16,13 @@ static const unsigned int gappiv    = 10;       /* vert inner gap between window
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const char *fonts[]          = { "Iosevka:size=11" };
-static const char dmenufont[]       = "Iosevka:size=11";
-static char col_gray1[]       = "#222222";
+static const char *fonts[]          = { "Iosevka:size=12" };
+static const char dmenufont[]       = "Iosevka:size=12";
+static char col_gray1[]       = "#3B4252";
 static char col_gray2[]       = "#444444";
 static char col_gray3[]       = "#bbbbbb";
-static char col_gray4[]       = "#000000";
-static char col_cyan[]        = "#8fbcbb";
+static char col_gray4[]       = "#3B4252";
+static char col_cyan[]        = "#81A1C1";
 static const char *colors[][3]      = {
 	  /*               fg           bg           border   */
        [SchemeNorm] = { col_gray3,  col_gray1, col_gray2 },
@@ -112,9 +112,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,     SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%")},
-	{ 0, XF86XK_AudioLowerVolume,   spawn,     SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%")},
-	{ 0, XF86XK_AudioMute,		spawn,	   SHCMD("pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo   0%")},
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,     SHCMD("pamixer -i 10")},
+	{ 0, XF86XK_AudioLowerVolume,   spawn,     SHCMD("pamixer -d 10")},
+	{ 0, XF86XK_AudioMute,		spawn,	   SHCMD("pamixer -t")},
 	{ 0, XK_Print,                  spawn,     SHCMD("flameshot gui")},
 	{ 0, XF86XK_MonBrightnessDown,  spawn,     SHCMD("light -U 10")},  
 	{ 0, XF86XK_MonBrightnessUp,    spawn,     SHCMD("light -A 10")},
