@@ -18,11 +18,11 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const char *fonts[]          = { "Iosevka:size=12" };
 static const char dmenufont[]       = "Iosevka:size=12";
-static char col_gray1[]       = "#3B4252";
-static char col_gray2[]       = "#444444";
-static char col_gray3[]       = "#bbbbbb";
-static char col_gray4[]       = "#3B4252";
-static char col_cyan[]        = "#59afca";
+static char col_gray1[]       = "#282a36";
+static char col_gray2[]       = "#ffb86c";
+static char col_gray3[]       = "#ff79c6";
+static char col_gray4[]       = "#ffb86c";
+static char col_cyan[]        = "#282a36";
 static const char *colors[][3]      = {
 	  /*               fg           bg           border   */
        [SchemeNorm] = { col_gray3,  col_gray1, col_gray2 },
